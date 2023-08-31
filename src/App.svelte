@@ -18,7 +18,7 @@
   import {getScalesExcluding, hasScale, namesFromScale} from './lib/scales';
   import translationResource from '../resource/translations';
 
-  const totalTones = 12 ;
+  const totalTones = 12;
 
   // tone => note
   const notesMatrix: {[tone: number]: string} = {
