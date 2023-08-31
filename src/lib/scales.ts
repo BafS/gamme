@@ -75,7 +75,7 @@ export const getScales = (tones: number = 12): {[binaryScale: number]: ScaleInfo
   scales[tones] ?? {};
 
 /**
- * TODO Exclude list.
+ * TODO: Exclude list.
  */
 export const getScalesExcluding = (exclude: string[], tones: number = 12): {[binaryScale: number]: ScaleInfo[]} => {
   const res = Object.entries(getScales(tones))
