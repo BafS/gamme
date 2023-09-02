@@ -93,7 +93,7 @@ export const findBinaryScaleFromName = (scaleName: string, tones: number = 12): 
   const cleanedScaleName = scaleName.toLowerCase();
 
   return +Object.entries(scalesList)
-    .find(([, names]) => 
+    .find(([, names]) =>
       names.find(({name}) => name.toLowerCase() === cleanedScaleName)
     )[0] ?? 0;
 }

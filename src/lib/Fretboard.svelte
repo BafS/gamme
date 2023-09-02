@@ -3,7 +3,14 @@
   const svgHeight = 280;
   const marginBottom = 30;
 
-  export let scales;
+  type Scale = {
+    interval: any;
+    tone: boolean;
+    name: any;
+    active: string|boolean;
+  };
+
+  export let scales: Scale[][];
   export let fretDecoration = (n: number) => [0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 2][n % 12];
   export const defaultColors = {
     background: 'transparent',

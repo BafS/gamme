@@ -41,7 +41,7 @@ const intervalsSymbolToIntervals = (intervals: string|string[]): number[] => {
 
   // TODO fn to "clean" string (b2 => b+ etc.)
   // intervals.map(i => i.replace('b', '-'));
-  
+
   return intervals.map(findTonesFromInterval)
 }
 
@@ -170,8 +170,8 @@ const fromNoteSymbolToInterval = (note: string, notesMatrix: {[pitchNumber: stri
   return keyBase + accidentals;
 };
 
-export const stepsToIntervals = (steps: BinaryArray): string[] => {
-  const intervalSet = {};
+export const stepsToIntervals = (steps: BinaryArray): (string|null)[] => {
+  const intervalSet: {[baseNote: string]: boolean} = {};
 
   return steps.map((s, i) => {
     if (s !== 1) {
@@ -239,7 +239,7 @@ export const fromIntervalToScale = (intervalSymbols: (string|null)[], rootNote: 
     // }
 
     let noteWithAccidental = getNoteSymbolFromNoteDegree(baseRootNote, baseNote, degree + acc, notesMatrix);
-    
+
     // notesSet[baseNote] = true;
 
     return noteWithAccidental;
