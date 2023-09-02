@@ -9,7 +9,14 @@
     },
   };
 
-  export let scale = [];
+  type Scale = {
+    interval: any;
+    tone: boolean;
+    name: any;
+    active: string|boolean;
+  };
+
+  export let scale: Scale[] = [];
   export let colors = defaultColors;
 
   // let allNotes = [];
@@ -30,10 +37,10 @@
   $: width = (svgWidth + spaceBetweenTones - margin.left - margin.right) / tones.length;
   const height = svgHeight - margin.bottom - margin.top;
 
-  let cachedPosition = [];
+  let cachedPosition: number[] = [];
   let lastWidth = 0;
 
-  const keyPosX = (n: number, width: number) => {
+  const keyPosX = (n: number, width: number): number => {
     if (n === 0 || n === 1) {
       return margin.left;
     }

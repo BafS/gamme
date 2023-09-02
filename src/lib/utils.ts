@@ -170,8 +170,8 @@ const fromNoteSymbolToInterval = (note: string, notesMatrix: {[pitchNumber: stri
   return keyBase + accidentals;
 };
 
-export const stepsToIntervals = (steps: BinaryArray): string[] => {
-  const intervalSet = {};
+export const stepsToIntervals = (steps: BinaryArray): (string|null)[] => {
+  const intervalSet: {[baseNote: string]: boolean} = {};
 
   return steps.map((s, i) => {
     if (s !== 1) {
