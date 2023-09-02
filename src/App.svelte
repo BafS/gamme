@@ -43,7 +43,7 @@
   };
 
   const parsedHash = new URLSearchParams(window.location.hash.substring(1));
-  
+
   const translationIndex = 'english';
   let selectedRootNote = parsedHash.get('root')?.toUpperCase() ?? notesMatrix[0];
   let selected = 0b101101010101;
@@ -203,9 +203,9 @@
           </option>
         {/each}
       </select>
-    </div> 
-  
-    <!--   
+    </div>
+
+    <!--
     <p>
       Scale input is flexible and can handle many notations:
     </p>
@@ -216,9 +216,9 @@
       <li>Using active tones with hexadecimal representation: B55 (represents 101101010101)</li>
     </ul>
     -->
-    
+
     <h3>Options</h3>
-  
+
     <div id="options" class="container">
       <div class="box">
         <h4>Guitar</h4>
@@ -228,7 +228,7 @@
         <br>
         Number of frets: <input class="input-s" bind:value={guitar.frets} placeholder="16" type="number" min="5" max="36">
       </div>
-  
+
       <div class="box">
         <h4>Keyboard</h4>
         Show keyboard: <input type=checkbox bind:checked={keyboard.show}>

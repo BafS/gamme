@@ -41,7 +41,7 @@ const intervalsSymbolToIntervals = (intervals: string|string[]): number[] => {
 
   // TODO fn to "clean" string (b2 => b+ etc.)
   // intervals.map(i => i.replace('b', '-'));
-  
+
   return intervals.map(findTonesFromInterval)
 }
 
@@ -239,7 +239,7 @@ export const fromIntervalToScale = (intervalSymbols: (string|null)[], rootNote: 
     // }
 
     let noteWithAccidental = getNoteSymbolFromNoteDegree(baseRootNote, baseNote, degree + acc, notesMatrix);
-    
+
     // notesSet[baseNote] = true;
 
     return noteWithAccidental;
